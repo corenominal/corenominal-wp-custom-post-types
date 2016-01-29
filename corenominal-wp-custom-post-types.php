@@ -21,3 +21,10 @@ require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/link-tag.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'post-types/snippet.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/snippet-tag.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/snippet-language.php' );
+
+/**
+ * Custom post type and taxonomies for doodle
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'post-types/doodle.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/doodle-tag.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/doodle-medium.php' );
