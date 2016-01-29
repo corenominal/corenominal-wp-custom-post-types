@@ -10,11 +10,14 @@
  */
 
 /**
- * Custom post type for links
+ * Custom post type and taxonomy for links
  */
 require_once( plugin_dir_path( __FILE__ ) . 'post-types/link.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/link-tag.php' );
 
 /**
- * Custom taxonomy link tags
+ * Custom post type and taxonomies for snippets
  */
-require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/link-tag.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'post-types/snippet.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/snippet-tag.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/snippet-language.php' );
