@@ -8,3 +8,13 @@
  * Version: 0.0.1
  * License: GPLv2
  */
+
+/**
+ * Custom post type for links
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'post-types/link.php' );
+
+/**
+ * Custom taxonomy link tags
+ */
+require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/link-tag.php' );
