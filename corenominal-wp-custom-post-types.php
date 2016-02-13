@@ -25,14 +25,6 @@ require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/snippet-language.php' );
 require_once( plugin_dir_path( __FILE__ ) . 'widgets/recent-snippets.php' );
 
 /**
- * Custom post type, taxonomies and widget for doodles
- */
-require_once( plugin_dir_path( __FILE__ ) . 'post-types/doodle.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/doodle-tag.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'taxonomies/doodle-medium.php' );
-require_once( plugin_dir_path( __FILE__ ) . 'widgets/latest-doodle.php' );
-
-/**
  * Fix pagination for combined post types
  */
 require_once( plugin_dir_path( __FILE__ ) . 'misc/fix-pagination.php' );
