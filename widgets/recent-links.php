@@ -81,7 +81,7 @@ class corenominal_recent_links_widget extends WP_Widget{
 					echo $listItem;
 				}
 			echo '</ul>';
-			echo '<p class="alllinks"><a href="' . site_url('link') . '"><i class="fa fa-chevron-right"></i> Browse All Links</a></p>';
+			echo '<p class="alllinks"><a href="' . site_url( 'link' ) . '"><i class="fa fa-chevron-right"></i> Browse All Links</a></p>';
 			wp_reset_postdata();
 		}
 		else

@@ -59,7 +59,8 @@ function corenominal_register_post_type_snippet()
 	        	'excerpt',
 	        	'comments',
 	        	'trackbacks'
-	        )
+	        ),
+	        'taxonomies' => array('category')
 	);
 	register_post_type( $slug, $args );
 }

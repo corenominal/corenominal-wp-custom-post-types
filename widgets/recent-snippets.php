@@ -81,7 +81,7 @@ class corenominal_recent_snippets_widget extends WP_Widget{
 					echo $listItem;
 				}
 			echo '</ul>';
-			echo '<p class="allsnippets"><a href="' . site_url('link') . '"><i class="fa fa-chevron-right"></i> Browse All Snippets</a></p>';
+			echo '<p class="allsnippets"><a href="' . site_url( 'snippet' ) . '"><i class="fa fa-chevron-right"></i> Browse All Snippets</a></p>';
 			wp_reset_postdata();
 		}
 		else

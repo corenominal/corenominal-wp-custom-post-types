@@ -60,7 +60,8 @@ function corenominal_register_post_type_link()
 	        	'excerpt',
 	        	'comments',
 	        	'trackbacks'
-	        )
+	        ),
+	        'taxonomies' => array('category')
 	);
 	register_post_type( $slug, $args );
 }

@@ -81,7 +81,7 @@ class corenominal_recent_posts_widget extends WP_Widget{
 					echo $listItem;
 				}
 			echo '</ul>';
-			echo '<p class="allposts"><a href="' . site_url() . '"><i class="fa fa-chevron-right"></i> Browse All Posts</a></p>';
+			echo '<p class="allposts"><a href="' . site_url( 'blog' ) . '"><i class="fa fa-chevron-right"></i> Browse All Posts</a></p>';
 			wp_reset_postdata();
 		}
 		else
