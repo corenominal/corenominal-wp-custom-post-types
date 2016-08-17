@@ -1,9 +1,10 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Create widget to produce links to RSS feeds
  */
 class corenominal_rss_widget extends WP_Widget{
-	
+
 	function __construct()
 	{
 		parent::__construct(
@@ -42,12 +43,12 @@ class corenominal_rss_widget extends WP_Widget{
 	{
 		extract( $args );
 		$title = apply_filters('widget_title', $instance['title']);
-		
+
 		if ( $title )
 		{
 			$title =  $before_title . $title . $after_title;
 		}
-		
+
 		$count_posts = wp_count_posts( 'post' );
 		$published_posts = $count_posts->publish;
 		$count_posts = wp_count_posts( 'link' );
@@ -55,14 +56,14 @@ class corenominal_rss_widget extends WP_Widget{
 		$count_posts = wp_count_posts( 'snippet' );
 		$published_snippets = $count_posts->publish;
 		$feeds = '';
-		
+
 		$feeds .= '<li><i class="fa fa-rss"></i> <a href="' . site_url() . '/feed/">Subscribe to All</a></li>';
 
 		if( $published_posts )
 		{
 			$feeds .= '<li><i class="fa fa-rss"></i> <a href="' . site_url() . '/feed/?post_type=post">Subscribe to Posts</a></li>';
 		}
-		
+
 		if( $published_links )
 		{
 			$feeds .= '<li><i class="fa fa-rss"></i> <a href="' . site_url() . '/feed/?post_type=link">Subscribe to Links</a></li>';
@@ -72,7 +73,7 @@ class corenominal_rss_widget extends WP_Widget{
 		{
 			$feeds .= '<li><i class="fa fa-rss"></i> <a href="' . site_url() . '/feed/?post_type=snippet">Subscribe to Snippets</a></li>';
 		}
-		
+
 		if($feeds != '')
 		{
 			echo $before_widget;

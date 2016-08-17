@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Custom taxonomy for snippet languages
  */
@@ -38,7 +39,7 @@ function corenominal_register_taxonomy_snippet_language()
             'rewrite'               => array( 'slug' => $slug ),
         );
 
-    register_taxonomy( $slug, 'snippet', $args );
+    register_taxonomy( $slug, array( 'post','snippet' ), $args );
 }
 
 add_action( 'init', 'corenominal_register_taxonomy_snippet_language' );

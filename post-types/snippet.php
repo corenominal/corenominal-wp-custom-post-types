@@ -1,11 +1,12 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Custom post type for snippets
  */
 
 function corenominal_register_post_type_snippet()
 {
-	
+
 	$singular = 'Snippet';
 	$plural = 'Snippets';
 	$slug = str_replace( ' ', '_', strtolower( $singular ) );
@@ -44,16 +45,16 @@ function corenominal_register_post_type_snippet()
 	        'query_var'           => true,
 	        'capability_type'     => 'post',
 	        'map_meta_cap'        => true,
-	        'rewrite'             => array( 
+	        'rewrite'             => array(
 	        	'slug' 			=> $slug,
 	        	'with_front' 	=> true,
 	        	'pages' 		=> true,
 	        	'feeds' 		=> true,
 	        ),
-	        'supports'            => array( 
-	        	'title', 
-	        	'editor', 
-	        	'author', 
+	        'supports'            => array(
+	        	'title',
+	        	'editor',
+	        	'author',
 	        	'custom-fields',
 	        	'thumbnail',
 	        	'excerpt',

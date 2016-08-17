@@ -1,9 +1,10 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Create "Recent" widget for custom post type - 'snippet'
  */
 class corenominal_recent_snippets_widget extends WP_Widget{
-	
+
 	function __construct()
 	{
 		parent::__construct(
@@ -67,7 +68,7 @@ class corenominal_recent_snippets_widget extends WP_Widget{
 	{
 		global $post;
 		$snippets = new WP_Query();
-		$snippets->query( 'post_type=snippet&posts_per_page=' . $numberOfSnippets );
+		$snippets->query( 'category_name=snippets&posts_per_page=' . $numberOfSnippets );
 		if( $snippets->found_posts > 0)
 		{
 			echo '<ul class="recent_snippets_widget recent">';

@@ -1,12 +1,12 @@
 <?php
-
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Custom post type for links
  */
 
 function corenominal_register_post_type_link()
 {
-	
+
 	$singular = 'Link';
 	$plural = 'Links';
 	$slug = str_replace( ' ', '_', strtolower( $singular ) );
@@ -45,16 +45,16 @@ function corenominal_register_post_type_link()
 	        'query_var'           => true,
 	        'capability_type'     => 'post',
 	        'map_meta_cap'        => true,
-	        'rewrite'             => array( 
+	        'rewrite'             => array(
 	        	'slug' 			=> $slug,
 	        	'with_front' 	=> true,
 	        	'pages' 		=> true,
 	        	'feeds' 		=> true,
 	        ),
-	        'supports'            => array( 
-	        	'title', 
-	        	'editor', 
-	        	'author', 
+	        'supports'            => array(
+	        	'title',
+	        	'editor',
+	        	'author',
 	        	'custom-fields',
 	        	'thumbnail',
 	        	'excerpt',
@@ -89,7 +89,7 @@ add_action( 'add_meta_boxes', 'corenominal_add_metabox_link' );
 function corenominal_metabox_link_callback( $post )
 {
 	wp_nonce_field( basename( __FILE__ ), 'metabox_nonce' );
-	$post_meta = get_post_meta( $post->ID ); 
+	$post_meta = get_post_meta( $post->ID );
 	?>
 
 	<div>
@@ -129,7 +129,7 @@ function corenominal_metabox_link_enqueue_scripts( $hook )
 {
 	if( 'post.php' == $hook || 'post-new.php' == $hook )
 	{
-	
+
 		wp_register_style( 'corenominal_metabox_link_css', plugin_dir_url( __FILE__ ) . 'css/corenominal_metabox_link.css', array(), '0.0.1', 'all' );
 		wp_enqueue_style( 'corenominal_metabox_link_css' );
 

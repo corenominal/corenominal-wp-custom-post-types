@@ -1,9 +1,10 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Create "Recent" widget for custom post type - 'link'
  */
 class corenominal_recent_links_widget extends WP_Widget{
-	
+
 	function __construct()
 	{
 		parent::__construct(
@@ -67,7 +68,7 @@ class corenominal_recent_links_widget extends WP_Widget{
 	{
 		global $post;
 		$links = new WP_Query();
-		$links->query( 'post_type=link&posts_per_page=' . $numberOfLinks );
+		$links->query( 'category_name=links&posts_per_page=' . $numberOfLinks );
 		if( $links->found_posts > 0)
 		{
 			echo '<ul class="recent_links_widget recent">';

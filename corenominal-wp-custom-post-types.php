@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'WPINC' ) ) { die('Direct access prohibited!'); }
 /**
  * Plugin Name: corenominal's Custom Post Types
  * Description: This plugin provides custom post types and taxonomies for my site.
@@ -43,4 +44,3 @@ require_once( plugin_dir_path( __FILE__ ) . 'widgets/recent-posts.php' );
  * A widget to display RSS feed links
  */
 require_once( plugin_dir_path( __FILE__ ) . 'widgets/subscriptions.php' );
-
